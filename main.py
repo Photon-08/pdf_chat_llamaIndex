@@ -8,7 +8,8 @@ from pathlib import Path
 import os
 import time
 from streamlit_js_eval import streamlit_js_eval
-
+save_folder = "upload"
+os.mkdir(save_folder, exist_ok = True)
 
 GROQ_API_KEY = "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"
 
@@ -47,7 +48,7 @@ def chat(prompt=None, index=None):
 
 def file_upload_and_index():
         
-    save_folder = "upload"
+    
     with st.sidebar:
         file = st.file_uploader(label="Upload your file:")
         if file:
