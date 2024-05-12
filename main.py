@@ -50,13 +50,13 @@ def file_upload_and_index():
     save_folder = "upload"
     with st.sidebar:
         file = st.file_uploader(label="Upload your file:")
-        
-        
-        save_path = Path(save_folder, file.name)
-        with open(save_path, mode='wb') as w:
-            w.write(file.getvalue())
         if file:
         
+            save_path = Path(save_folder, file.name)
+            with open(save_path, mode='wb') as w:
+                w.write(file.getvalue())
+            
+            
             for f in os.listdir("upload"):
                 if f.endswith(".pdf"):
                     file_path = os.path.join(save_folder, f)
