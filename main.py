@@ -55,13 +55,14 @@ def file_upload_and_index():
         save_path = Path(save_folder, file.name)
         with open(save_path, mode='wb') as w:
             w.write(file.getvalue())
+        if file:
         
-        for f in os.listdir("upload"):
-            if f.endswith(".pdf"):
-                file_path = os.path.join(save_folder, f)
-                with st.spinner('Creating a knowledge-base, Please wait'):
-                    stat, index = create_index(file_path)
-        return stat, index
+            for f in os.listdir("upload"):
+                if f.endswith(".pdf"):
+                    file_path = os.path.join(save_folder, f)
+                    with st.spinner('Creating a knowledge-base, Please wait'):
+                        stat, index = create_index(file_path)
+            return stat, index
         
         
             
