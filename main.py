@@ -70,8 +70,8 @@ def file_upload_and_index():
 
 
 
-st.header('Chat with your pdf', divider='rainbow')
-st.caption('_Upload your document and chat with it in realtime!_')
+st.header('PdfPal - Chat with your pdf', divider='rainbow')
+st.caption('_Developed by Indranil Bhattacharyya!_')
 
 
 
