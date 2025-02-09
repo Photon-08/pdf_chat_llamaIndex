@@ -11,7 +11,7 @@ from streamlit_js_eval import streamlit_js_eval
 save_folder = "upload"
 os.makedirs(save_folder, exist_ok = True)
 
-GROQ_API_KEY = "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"
+GROQ_API_KEY = 
 
 def create_index(file_name=None):
     documents = SimpleDirectoryReader(
